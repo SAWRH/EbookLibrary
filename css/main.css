@@ -1,0 +1,251 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: black;
+    line-height: 1.6;
+    
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+    
+
+}
+
+/*Container*/
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*Intro*/
+.intro{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.intro_inner{
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+    text-align: center;
+}
+.intro_title{
+    font-size: 100px;
+    font-weight: 700;
+    
+}
+.intro_title::after{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: black;
+    margin: 60px auto;
+}
+
+
+/*Header*/
+
+.header{
+    margin-top: 20px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.header_inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_logo{
+    font-size: 30px;
+    font-weight: 700;
+    color: black;
+}
+
+/*Navigation*/
+
+header nav ul li{
+    position: relative;
+    float: left;
+}
+header nav ul li a{
+    padding: 15px;
+    padding-bottom: 0;
+    display: inline-block;
+    text-decoration: none;
+    transition: color 0.2s linear;
+    color: black;
+}
+.header nav ul li a::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #900C3F;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    
+    transition: opacity 0.2s linear;
+}
+.header nav ul li a:hover::after{
+    opacity: 1;
+    
+}
+
+
+nav ul li ul{
+    position: absolute;
+    left: 0;
+    top: 50px;
+    opacity: 0;
+    transition: opacity 0.2s linear;
+    
+}
+nav ul li:hover > ul{
+    opacity: 1;
+}
+
+/*Button*/
+.btn{
+    appearance: none;
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 15px;
+    border: 3px solid #900C3F;
+    color: white;
+    background-color: #900C3F;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s linear, color 0.2s linear, border 0.2s linear;
+
+}
+.btn:hover{
+    background-color: #b80046;
+    border: 3px solid #b80046;
+}
+
+/*Section*/
+.section{
+    padding: 80px 0;
+
+}
+.section_header{
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+.section_subtitle{
+    font-size: 24px;
+}
+.section_title{
+    font-size: 30px;
+    font-weight: 700;
+}
+.section_title::after{
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 60px auto;
+    background-color: #900C3F;
+}
+.section_text{
+    font-size: 15px;
+}
+
+/*About*/
+.about{
+    display: flex;
+    justify-content: space-between;
+}
+.about_item{
+    width: 380;
+    background-color: #900C3F;
+    position: relative;
+}
+.about_item:hover .about_img{
+    transform: translate3d(-10px, -10px, 0);
+}
+.about_item:hover .about_img img{
+    opacity: 0.7;
+}
+.about_item:hover .about_text{
+    opacity: 1;
+}
+.about_img{
+    background: linear-gradient(to bottom, #900C3F, #b80046);
+    transition: transform 0.2s linear;
+}
+.about_img img{
+    display: block;
+    transition: opacity 0.2s linear;
+}
+.about_text{
+    width: 100%;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 2;
+    transform: translate3d(0, 50%, 0);
+    transition: opacity 0.2s linear;
+
+}
+
+/*Statistic*/
+.statistic{
+    background-color: #900C3F;
+}
+.stat{
+    display: flex;
+}
+.stat_item{
+    flex: 1 1 0;
+    padding: 70px 25px;
+    border-left: 1px solid #b61c57;
+    text-align: center;
+    
+}
+.stat_item:last-child{
+    border-right: 1px solid #b61c57;
+}
+.stat_content{
+    font-weight: 200;
+    color: white;
+    
+}
+
+
+
+
+
+
+
+
+
+
